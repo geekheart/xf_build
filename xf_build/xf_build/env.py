@@ -15,6 +15,8 @@ XF_TARGET_PATH = Path(os.environ.get("XF_TARGET_PATH")).resolve()
 
 XF_PROJECT_PATH = Path(os.environ.get("XF_PROJECT_PATH", Path("."))).resolve()
 XF_PROJECT = os.environ.get("XF_PROJECT", XF_PROJECT_PATH.name)
+os.environ["XF_PROJECT"] = XF_PROJECT
+os.environ["XF_PROJECT_PATH"] = XF_PROJECT_PATH.as_posix()
 
 PROJECT_BUILD_PATH = XF_PROJECT_PATH / "build"
 PROJECT_CONFIG_PATH = PROJECT_BUILD_PATH / "config.in"

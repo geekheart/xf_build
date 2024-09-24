@@ -165,8 +165,7 @@ class Project:
             if name in self.build_env["public_components"]:
                 raise f"component {name} already exists"
             self.build_env["public_components"][name] = {}
-            self.build_env["public_components"][name]["path"] = script_path.as_posix(
-            )
+            self.build_env["public_components"][name]["path"] = script_path.as_posix()
             self.build_env["public_components"][name]["srcs"] = srcs
             self.build_env["public_components"][name]["inc_dirs"] = inc_dirs
             self.build_env["public_components"][name]["requires"] = requires
